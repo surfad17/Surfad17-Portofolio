@@ -1,10 +1,8 @@
-// ── Nav scroll state ──
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// ── Mobile menu ──
 function toggleMobile() {
     const burger = document.getElementById('navBurger');
     const menu   = document.getElementById('mobileMenu');
@@ -19,7 +17,6 @@ function closeMobile() {
     document.getElementById('mobileOverlay').classList.remove('open');  
 }
 
-// ── Scroll reveal ──
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -30,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ── Video Modal ──
 function openModal(url, title, tag, isPortrait = false) {
     const modal   = document.getElementById('videoModal');
     const content = document.getElementById('modalContent');
@@ -51,7 +47,6 @@ function handleModalClick(e) {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-// ── Personal project inline embed ──
 function loadPersonalEmbed(card, embedUrl, videoId) {
     const placeholder = card.querySelector('.embed-placeholder');
     if (!placeholder) return;
@@ -63,7 +58,6 @@ function loadPersonalEmbed(card, embedUrl, videoId) {
     placeholder.replaceWith(iframe);
 }
 
-// ── Platform switcher ──
 function switchPlatform(cardId, platform) {
     const card = document.getElementById(cardId);
     if (!card) return;
