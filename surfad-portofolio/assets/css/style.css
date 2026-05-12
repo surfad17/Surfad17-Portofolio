@@ -34,7 +34,6 @@ body {
     line-height: 1.6;
 }
 
-/* Noise texture overlay */
 body::before {
     content: '';
     position: fixed; inset: 0;
@@ -94,7 +93,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
 }
 .nav-cta:hover { background: var(--blue-hover); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(58,86,255,0.45); }
 
-/* Burger */
 .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; z-index: 1100; }
 .nav-burger span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: transform 0.3s, opacity 0.3s; }
 .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -201,7 +199,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
 }
 .mobile-overlay.open { opacity: 1; pointer-events: all; }
 
-/* Hero */
 #hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: flex-end;
@@ -209,7 +206,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
     position: relative; overflow: hidden;
 }
 
-/* Multi-layer dark background */
 #hero::before {
     content: '';
     position: absolute; inset: 0; z-index: 0;
@@ -220,7 +216,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
     linear-gradient(160deg, #0d0d22 0%, #070712 50%, #0a0a1c 100%);
 }
 
-/* Dot grid */
 #hero::after {
     content: '';
     position: absolute; inset: 0; z-index: 0;
@@ -298,7 +293,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* Floating visual shapes on hero right */
 .hero-deco {
     position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
@@ -315,7 +309,6 @@ nav.scrolled { background: rgba(7,7,18,0.92); border-color: rgba(255,255,255,0.1
 .hero-deco-cell:nth-child(5) { background: rgba(91,78,255,0.08); }
 .hero-deco-cell:nth-child(8) { background: rgba(255,92,58,0.06); }
 
-/* Section */
 section { padding: 100px 48px; position: relative; }
 
 .section-label {
@@ -342,7 +335,6 @@ section { padding: 100px 48px; position: relative; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* About */
 #about {
     background:
     radial-gradient(ellipse 80% 60% at 0% 0%, rgba(58,86,255,0.1) 0%, transparent 55%),
@@ -426,7 +418,6 @@ section { padding: 100px 48px; position: relative; }
 .stat-num { font-family: var(--serif); font-size: 2rem; line-height: 1; color: var(--white); letter-spacing: -0.03em; font-weight: 700; }
 .stat-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 6px; }
 
-/* Portofolio */
 #works {
     background:
     radial-gradient(ellipse 60% 50% at 100% 50%, rgba(91,78,255,0.07) 0%, transparent 50%),
@@ -467,13 +458,10 @@ section { padding: 100px 48px; position: relative; }
 .work-item:hover .work-play { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 .work-play svg { margin-left: 3px; }
 
-/* TikTok items — portrait ratio */
 .work-item.tiktok-port { aspect-ratio: 9/14; }
 
-/* TikTok items — landscape ratio */
 .work-item.tiktok-land { aspect-ratio: 16/9; }
 
-/* Custom TikTok Player Card */
 .tiktok-custom-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.09);
@@ -542,7 +530,6 @@ section { padding: 100px 48px; position: relative; }
 }
 .tiktok-open-btn:hover { background: rgba(255,255,255,0.13); color: white; }
 
-/* Personal Project */
 #last-projects {
     background:
     radial-gradient(ellipse 70% 60% at 20% 20%, rgba(91,78,255,0.14) 0%, transparent 55%),
@@ -624,7 +611,6 @@ section { padding: 100px 48px; position: relative; }
 }
 .tiktok-profile-link:hover { background: rgba(255,255,255,0.14); }
 
-/* Price */
 #pricing {
     background:
     radial-gradient(ellipse 60% 50% at 50% 0%, rgba(58,86,255,0.07) 0%, transparent 60%),
@@ -692,7 +678,6 @@ section { padding: 100px 48px; position: relative; }
 }
 .pricing-notes-list li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-size: 0.78rem; }
 
-/* Client */
 #clients {
     background:
     radial-gradient(ellipse 60% 50% at 0% 100%, rgba(58,86,255,0.07) 0%, transparent 50%),
@@ -739,7 +724,6 @@ section { padding: 100px 48px; position: relative; }
 }
 .client-visit-link:hover { gap: 9px; }
 
-/* Service */
 #services {
     background:
     radial-gradient(ellipse 60% 50% at 100% 0%, rgba(58,86,255,0.07) 0%, transparent 50%),
@@ -796,7 +780,6 @@ section { padding: 100px 48px; position: relative; }
 .arrow-icon { opacity: 0.25; transition: opacity 0.2s, transform 0.2s; }
 .contact-link:hover .arrow-icon { opacity: 1; transform: translateX(4px); }
 
-/* Footer */
 footer {
     background: #030308;
     color: var(--white); padding: 36px 48px;
@@ -833,7 +816,6 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.22); }
 .modal-info h3 { font-family: var(--serif); font-size: 1.3rem; color: var(--white); font-weight: 700; }
 .modal-info p { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 4px; }
 
-/* Animations */
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes rotateBorder { to { transform: rotate(360deg); } }
@@ -844,7 +826,6 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.22); }
 
 }
 
-/* Responsive */
 @media (max-width: 1100px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-left { position: static; flex-direction: row; align-items: center; gap: 28px; }
